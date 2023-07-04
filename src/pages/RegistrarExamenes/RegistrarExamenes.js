@@ -45,7 +45,7 @@ const RegistrarExamenes = (props) => {
 
   const [Examenes, setExamenes] = useState([""]);
   const [code_exam, setcode_exam] = useState("");
-  const [nombre,setnombre]=useState("");
+  const [nombre, setnombre] = useState("");
   const [descripcion, Setdescipcion] = useState("");
   const [gasto, Setgasto] = useState("");
   const [hora, Sethora] = useState("");
@@ -57,7 +57,9 @@ const RegistrarExamenes = (props) => {
   const [fecha, setfecha] = useState(new Date("05 October 2011 14:48 UTC"));
 
   const InfoModal = (id, code_exam) => {
-    {window.localStorage.setItem("code_exam", code_exam);}
+    {
+      window.localStorage.setItem("code_exam", code_exam);
+    }
   };
 
   const VariableCodigoExamen = localStorage.getItem("code_exam");
@@ -79,27 +81,26 @@ const RegistrarExamenes = (props) => {
     var metodo;
 
     parametros = {
-      code_cita:Examenes_porCodigo,
-      nombre:nombre
+      code_cita: Examenes_porCodigo,
+      nombre: nombre,
     };
     metodo = "POST";
     enviarSolicitu(metodo, parametros);
-
   };
 
   const GenerarDetalleExamen = (code_exam) => {
     var parametro2;
     var metodo2;
-    parametro2={
-      gasto:0.0,
-      descripcion:"vacio",
-      fecha:"2023-01-01",
-      hora:"00:00:00",
-      resultado:"vacio",
-      code_exam:code_exam,
-    }
-    metodo2="POST";
-    enviarSolicitu2(metodo2,parametro2);
+    parametro2 = {
+      gasto: 0.0,
+      descripcion: "vacio",
+      fecha: "2023-01-01",
+      hora: "00:00:00",
+      resultado: "vacio",
+      code_exam: code_exam,
+    };
+    metodo2 = "POST";
+    enviarSolicitu2(metodo2, parametro2);
   };
 
   const enviarSolicitu = async (metodo, parametros) => {
@@ -126,7 +127,7 @@ const RegistrarExamenes = (props) => {
       .then(function (respuesta) {
         var tipo = respuesta.data[0];
         var msj = respuesta.data[1];
-        console.log("se creo la onda vacio ")
+        console.log("se creo la onda vacio ");
       })
       .catch(function (error) {
         //show_Alerta("Error en la solicitod", "error");
@@ -135,11 +136,15 @@ const RegistrarExamenes = (props) => {
   };
 
   const enviarSolicitu3 = async (metodo, parametros) => {
-    await axios({ method: metodo, url: `http://localhost:25060/api/examen/${parametros.code_exam}`, data: parametros })
+    await axios({
+      method: metodo,
+      url: `http://localhost:25060/api/examen/${parametros.code_exam}`,
+      data: parametros,
+    })
       .then(function (respuesta) {
         var tipo = respuesta.data[0];
         var msj = respuesta.data[1];
-        console.log("se creo la onda vacio ")
+        console.log("se creo la onda vacio ");
         show_Alerta("correcto");
       })
       .catch(function (error) {
@@ -194,9 +199,7 @@ const RegistrarExamenes = (props) => {
                     <th>Nombre Examen:</th>
                     <th></th>
                     <th>
-                    <MDBBtn
-                        className="btn btn-primary"
-                      >
+                      <MDBBtn className="btn btn-primary">
                         Recargar Pagina
                       </MDBBtn>
                     </th>
@@ -227,18 +230,18 @@ const RegistrarExamenes = (props) => {
                         </MDBBtn>
                       </td>
                       <td>
-                      <MDBBtn
+                        <MDBBtn
                           className="btn btn-warning"
                           onClick={() => GenerarDetalleExamen(examen.code_exam)}
                           href="http://localhost:3000/Examenes/Registro/Detalle"
                         >
-                            Generar Detalle Examen
+                          Generar Detalle Examen
                         </MDBBtn>
                       </td>
                       <td>
-                      <MDBBtn
+                        <MDBBtn
                           className="btn btn-danger"
-                          onClick={() => deleteExamen( examen.code_exam)}
+                          onClick={() => deleteExamen(examen.code_exam)}
                         >
                           Eliminar Examen
                         </MDBBtn>
@@ -268,7 +271,7 @@ const RegistrarExamenes = (props) => {
               ></button>
             </div>
             <div className="modal-body">
-            <div className="input-group mb-3">
+              <div className="input-group mb-3">
                 <input
                   type="text"
                   id="tiempo_hos"
@@ -279,7 +282,9 @@ const RegistrarExamenes = (props) => {
                 />
               </div>
               <div className="d-grid col-6 mx-auto">
-                <button className="btn btn-success" onClick={() => validar()}>Guardar</button>
+                <button className="btn btn-success" onClick={() => validar()}>
+                  Guardar
+                </button>
               </div>
             </div>
             <div className="modal-footer">

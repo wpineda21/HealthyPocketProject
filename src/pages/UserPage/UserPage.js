@@ -30,14 +30,13 @@ const UserPage = (props) => {
 
       <div className="container ">
         <div className="row text-center pt-5">
-          <h1>¿Que deseas hacer Hoy? :  {localStorage.getItem("usuario")}</h1>
+          <h1>¿Que deseas hacer Hoy? : {localStorage.getItem("usuario")}</h1>
         </div>
         <div className="row mt-5">
           <MDBRow>
             <MDBCol size={4}>
               <MDBListGroup light small>
                 <MDBTabs>
-
                   <MDBListGroupItem
                     action
                     active={basicActive === "settings2"}
@@ -61,7 +60,7 @@ const UserPage = (props) => {
                   >
                     <MDBTabsItem>
                       <MDBTabsLink onClick={() => handleBasicClick("home")}>
-                        Ver Examenes  
+                        Ver Examenes
                       </MDBTabsLink>
                     </MDBTabsItem>
                   </MDBListGroupItem>
@@ -86,7 +85,9 @@ const UserPage = (props) => {
                     className="px-3"
                   >
                     <MDBTabsItem>
-                      <MDBTabsLink onClick={() => handleBasicClick("userprofile")}>
+                      <MDBTabsLink
+                        onClick={() => handleBasicClick("userprofile")}
+                      >
                         Ver mi Perfil
                       </MDBTabsLink>
                     </MDBTabsItem>
@@ -99,7 +100,9 @@ const UserPage = (props) => {
                     className="px-3"
                   >
                     <MDBTabsItem>
-                      <MDBTabsLink onClick={() => handleBasicClick("statistics")}>
+                      <MDBTabsLink
+                        onClick={() => handleBasicClick("statistics")}
+                      >
                         Ver Mis Estadisticas
                       </MDBTabsLink>
                     </MDBTabsItem>
@@ -117,14 +120,12 @@ const UserPage = (props) => {
                       </MDBTabsLink>
                     </MDBTabsItem>
                   </MDBListGroupItem>
-                  
                 </MDBTabs>
               </MDBListGroup>
             </MDBCol>
 
             <MDBCol size={8}>
               <MDBTabsContent>
-
                 <MDBTabsPane show={basicActive === "settings2"}>
                   Accede a una visión completa y personalizada de tus
                   estadísticas médicas. Explora tus datos de salud, incluidos
@@ -147,7 +148,9 @@ const UserPage = (props) => {
                   completo de tus exámenes médicos para tener un control más
                   efectivo de tu salud.
                   <h1></h1>
-                  <MDBBtn className="btn-back"  href="/Examenes">Ver Examenes</MDBBtn>
+                  <MDBBtn className="btn-back" href="/Examenes">
+                    Ver Examenes
+                  </MDBBtn>
                 </MDBTabsPane>
 
                 <MDBTabsPane show={basicActive === "profile"}>
@@ -158,7 +161,9 @@ const UserPage = (props) => {
                   un registro actualizado de tu plan de medicación para
                   garantizar un manejo adecuado y seguro de tus tratamientos.
                   <h1></h1>
-                  <MDBBtn className="btn-back" href="/Medicamento">Ver Mis Medicamentos</MDBBtn>
+                  <MDBBtn className="btn-back" href="/Medicamento">
+                    Ver Mis Medicamentos
+                  </MDBBtn>
                 </MDBTabsPane>
                 <MDBTabsPane show={basicActive === "settings"}>
                   Accede a una visión completa y personalizada de tus
@@ -173,8 +178,9 @@ const UserPage = (props) => {
                 </MDBTabsPane>
 
                 <MDBTabsPane show={basicActive === "userprofile"}>
-                  Accede a una vista resumida sobre tu perfil de datos relevantes, monitorea desde
-                  un punto de vista general tus datos mas relevantes como tu nombre, doctor principal,
+                  Accede a una vista resumida sobre tu perfil de datos
+                  relevantes, monitorea desde un punto de vista general tus
+                  datos mas relevantes como tu nombre, doctor principal,
                   examenes realizados entre otas cosas.
                   <h1></h1>
                   <MDBBtn className="btn-back" href="/UserProfile">
@@ -191,9 +197,10 @@ const UserPage = (props) => {
                 </MDBTabsPane>
 
                 <MDBTabsPane show={basicActive === "mapsinfo"}>
-                  En esta opción podras ver el mapa de El Salvador, con tu ubicacion y los hospitales
-                  cercanos a tu direccion estimada, podras filtrar y entre otras opciones para
-                  mantenerte informado.
+                  En esta opción podras ver el mapa de El Salvador, con tu
+                  ubicacion y los hospitales cercanos a tu direccion estimada,
+                  podras filtrar y entre otras opciones para mantenerte
+                  informado.
                   <h1></h1>
                   <MDBBtn className="btn-back" href="/SigIntegration">
                     Ver mapa
