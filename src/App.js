@@ -12,6 +12,7 @@ import VisualizarExamenes from "./pages/RegistrarExamenes/VisualizarExamenes";
 import RegistrarExamenes from "./pages/RegistrarExamenes/RegistrarExamenes";
 import ExamenDetalle from "./pages/RegistrarExamenes/ExamenDetalle";
 import Medicamentos from "./pages/Medicamentos/Medicamentos";
+import UserProfile from "./pages/UserProfile/UserProfile";
 
 
 
@@ -29,6 +30,7 @@ function App() {
         <Route path="/Examenes/Registro" element={ <RegistrarExamenes/> }></Route>
         <Route path="/Examenes/Registro/Detalle" element={ <ExamenDetalle/> }></Route>
         <Route path="/Medicamento" element={ <Medicamentos/> }></Route>
+        <Route path="/UserProfile" element={ <UserProfile/>}></Route>
       </Routes>
       </BrowserRouter>
     </div>

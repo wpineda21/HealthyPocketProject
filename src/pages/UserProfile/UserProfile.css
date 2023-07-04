@@ -1,0 +1,36 @@
+
+.container-main-card{
+    width: 90%;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.container-main-card h1{
+    text-align: center;
+}
+
+.container-card-user-p{
+    display: flex;
+    justify-content: center;
+}
+
+.cards-user-c{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+.card-user-p{
+    flex: 1 1 21rem;
+    box-shadow: 0 0 10px #22A39F;
+    border-radius: 0.6rem;
+    padding: 2%;
+    border: 2px black;
+    margin: 10px;
+    align-self: normal;
+}
