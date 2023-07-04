@@ -13,6 +13,7 @@ import RegistrarExamenes from "./pages/RegistrarExamenes/RegistrarExamenes";
 import ExamenDetalle from "./pages/RegistrarExamenes/ExamenDetalle";
 import Medicamentos from "./pages/Medicamentos/Medicamentos";
 import UserProfile from "./pages/UserProfile/UserProfile";
+import SigIntegration from "./pages/SigIntegration/SigIntegration";
 
 
 
@@ -31,6 +32,7 @@ function App() {
         <Route path="/Examenes/Registro/Detalle" element={ <ExamenDetalle/> }></Route>
         <Route path="/Medicamento" element={ <Medicamentos/> }></Route>
         <Route path="/UserProfile" element={ <UserProfile/>}></Route>
+        <Route path="/SigIntegration" element={ <SigIntegration/>}></Route>
       </Routes>
       </BrowserRouter>
     </div>
