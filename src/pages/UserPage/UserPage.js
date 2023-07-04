@@ -59,7 +59,7 @@ const UserPage = (props) => {
                   >
                     <MDBTabsItem>
                       <MDBTabsLink onClick={() => handleBasicClick("home")}>
-                        Registrar Examenes
+                        Ver Examenes  
                       </MDBTabsLink>
                     </MDBTabsItem>
                   </MDBListGroupItem>
@@ -83,7 +83,7 @@ const UserPage = (props) => {
                   >
                     <MDBTabsItem>
                       <MDBTabsLink onClick={() => handleBasicClick("messages")}>
-                        Ver Gastos
+                        Ver mi Perfil
                       </MDBTabsLink>
                     </MDBTabsItem>
                   </MDBListGroupItem>
@@ -126,7 +126,7 @@ const UserPage = (props) => {
                   completo de tus exámenes médicos para tener un control más
                   efectivo de tu salud.
                   <h1></h1>
-                  <MDBBtn className="btn-back">Registrar Examenes</MDBBtn>
+                  <MDBBtn className="btn-back"  href="/Examenes">Ver Examenes</MDBBtn>
                 </MDBTabsPane>
                 <MDBTabsPane show={basicActive === "profile"}>
                   Accede rápidamente a una lista completa de tus medicamentos,
@@ -136,17 +136,7 @@ const UserPage = (props) => {
                   un registro actualizado de tu plan de medicación para
                   garantizar un manejo adecuado y seguro de tus tratamientos.
                   <h1></h1>
-                  <MDBBtn className="btn-back">Ver Mis Medicamentos</MDBBtn>
-                </MDBTabsPane>
-                <MDBTabsPane show={basicActive === "messages"}>
-                  Realiza un seguimiento preciso de tus gastos médicos con esta
-                  opción. Registra y clasifica tus gastos relacionados con la
-                  atención médica, como medicamentos, consultas médicas, pruebas
-                  y tratamientos. Observa de manera clara cuánto has gastado en
-                  cada categoría y genera informes para un análisis más
-                  detallado. Mantén un control financiero efectivo de tus costos
-                  médicos .<h1></h1>
-                  <MDBBtn className="btn-back">ir a ver gastos</MDBBtn>
+                  <MDBBtn className="btn-back" href="/Medicamento">Ver Mis Medicamentos</MDBBtn>
                 </MDBTabsPane>
                 <MDBTabsPane show={basicActive === "settings"}>
                   Accede a una visión completa y personalizada de tus

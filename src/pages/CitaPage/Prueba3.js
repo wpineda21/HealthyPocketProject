@@ -6,7 +6,6 @@ import { show_Alerta } from "../functions";
 import Header from "../Header/Header";
 import DatePicker from "react-datepicker";
 import Button from "react-bootstrap/Button";
-import "./citaPage.css";
 import {
   MDBCard,
   MDBCardBody,
@@ -31,7 +30,7 @@ import {
   MDBCheckbox,
 } from "mdb-react-ui-kit";
 
-const Citas = (props) => {
+const Prueba3 = (props) => {
   const CitasUsuario = localStorage.getItem("code_user");
   const API_URL = "http://localhost:25060/api/cita/";
   const API_URL2 = `http://localhost:25060/api/cita/${CitasUsuario}`;
@@ -85,7 +84,6 @@ const Citas = (props) => {
       settiempo_hos(tiempo_hos);
       setprecio(precio);
       setcode_cita(code_cita);
-      console.log(code_cita);
     }
   };
 
@@ -110,7 +108,7 @@ const Citas = (props) => {
         };
         console.log(parametros);
         metodo = "POST";
-
+       
         enviarSolicitu(metodo, parametros);
       }
       if (operation === 2) {
@@ -250,7 +248,7 @@ const Citas = (props) => {
                       <td>{citas.tiempo_hos}</td>
                       <td>${citas.precio}</td>
                       <td>
-                        <MDBBtn
+                        <MDBBtn 
                           data-bs-toggle="modal"
                           data-bs-target="#modalCitas"
                           onClick={() =>
@@ -270,7 +268,7 @@ const Citas = (props) => {
                         </MDBBtn>
                       </td>
                       <td>
-                        <MDBBtn
+                        <MDBBtn 
                           className="btn btn-danger"
                           onClick={() => deleteCita(citas.id, citas.code_cita)}
                         >
@@ -368,4 +366,4 @@ const Citas = (props) => {
   );
 };
 
-export default Citas;
+export default Prueba3;

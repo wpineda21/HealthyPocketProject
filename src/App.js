@@ -2,14 +2,16 @@ import React from "react";
 import './App.css';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Login from './pages/Login/Login';
-import Header from "./pages/Header/Header";
-import SHeader from "./pages/SimpleHeader/SHeader";
 import Home from "./pages/HomePage/HomePage";
 import UserPage from "./pages/UserPage/UserPage";
-import Citas from "./pages/CitaPage/CitaPage";
+import Citas from './pages/CitaPage/CitaPage';
 import SearchComponent from "./Component/SearchComponent";
-import ExamRegistration from "./pages/Exampage/ExamPage";
-import MedicationSchedule from "./pages/Medicamen/Medicament";
+import Prueba from "./pages/Prueba2/prueba";
+import Prueba3 from "./pages/CitaPage/Prueba3";
+import VisualizarExamenes from "./pages/RegistrarExamenes/VisualizarExamenes";
+import RegistrarExamenes from "./pages/RegistrarExamenes/RegistrarExamenes";
+import ExamenDetalle from "./pages/RegistrarExamenes/ExamenDetalle";
+import Medicamentos from "./pages/Medicamentos/Medicamentos";
 
 
 
@@ -23,14 +25,17 @@ function App() {
         <Route path="/Home" element={ <Login/> }></Route>
         <Route path="/UserPage" element={ <UserPage/> }></Route>
         <Route path="/Citas" element={ <Citas/> }></Route>
-        <Route path="/Citas2" element={ <SearchComponent/> }></Route>
-        <Route path="/Exam" element={ <ExamRegistration/> }></Route>
-        <Route path="/Medicamento" element={ <MedicationSchedule/> }></Route>
+        <Route path="/Examenes" element={ <VisualizarExamenes/> }></Route>
+        <Route path="/Examenes/Registro" element={ <RegistrarExamenes/> }></Route>
+        <Route path="/Examenes/Registro/Detalle" element={ <ExamenDetalle/> }></Route>
+        <Route path="/Medicamento" element={ <Medicamentos/> }></Route>
       </Routes>
       </BrowserRouter>
     </div>
   );
+  
 }
+
 
 export default App;
 
