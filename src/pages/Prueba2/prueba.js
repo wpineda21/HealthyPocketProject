@@ -29,12 +29,11 @@ import {
 } from "mdb-react-ui-kit";
 
 const prueba = () => {
-
   const CitasUsuario = localStorage.getItem("code_user");
   const API_URL = "http://localhost:25060/api/cita/";
   const API_URL2 = `http://localhost:25060/api/cita/${CitasUsuario}`;
   //const API_URL3 = `http://localhost:25060/api/cita/${CitasUsuario}`;
- 
+
   const [cita, setcitas] = useState([]);
 
   const [id, setid] = useState();
@@ -161,7 +160,6 @@ const prueba = () => {
   };
 
   const enviarSolicitu = async (metodo, parametros) => {
-
     await axios({ method: metodo, url: API_URL, data: parametros })
       .then(function (respuesta) {
         var tipo = respuesta.data[0];
@@ -218,12 +216,12 @@ const prueba = () => {
     });
   };
 
-  const recargar = (reload) =>{
-    const reloa2=reload;
-    if(reloa2===true){
-        location.reload(getUsers);
+  const recargar = (reload) => {
+    const reloa2 = reload;
+    if (reloa2 === true) {
+      location.reload(getUsers);
     }
-  }
+  };
 
   return (
     <div className="App">
@@ -252,10 +250,15 @@ const prueba = () => {
                     <th>fecha</th>
                     <th>cita2</th>
                     <th>cita2</th>
-                    <th> <button
-                className="btn btn-primary"
-                onClick={() => recargar(true)}
-              >Recargar</button></th>
+                    <th>
+                      {" "}
+                      <button
+                        className="btn btn-primary"
+                        onClick={() => recargar(true)}
+                      >
+                        Recargar
+                      </button>
+                    </th>
                   </tr>
                 </thead>
                 <tbody className="table-group-divider">
@@ -361,7 +364,7 @@ const prueba = () => {
               </div>
               <div className="d-grid col-6 mx-auto">
                 <button onClick={() => validar()} className="btn btn-success">
-                    Guardar
+                  Guardar
                 </button>
               </div>
             </div>
@@ -371,7 +374,9 @@ const prueba = () => {
                 class="btn btn-primary"
                 data-bs-dismiss="modal"
                 aria-label="Close"
-              >Cerrar</button>
+              >
+                Cerrar
+              </button>
             </div>
           </div>
         </div>

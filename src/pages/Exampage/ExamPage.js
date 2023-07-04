@@ -38,9 +38,8 @@ const ExamRegistration = () => {
 
   const [exam, setExam] = useState([]);
 
-  
   const [citas, setcitas] = useState([]);
-  
+
   const [newExam, setNewExam] = useState({
     name: "",
     date: null,

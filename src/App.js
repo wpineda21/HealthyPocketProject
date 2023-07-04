@@ -14,6 +14,7 @@ import ExamenDetalle from "./pages/RegistrarExamenes/ExamenDetalle";
 import Medicamentos from "./pages/Medicamentos/Medicamentos";
 import UserProfile from "./pages/UserProfile/UserProfile";
 import SigIntegration from "./pages/SigIntegration/SigIntegration";
+import Contraseña from "./pages/Contraseña/Contraseña";
 
 
 
@@ -33,6 +34,7 @@ function App() {
         <Route path="/Medicamento" element={ <Medicamentos/> }></Route>
         <Route path="/UserProfile" element={ <UserProfile/>}></Route>
         <Route path="/SigIntegration" element={ <SigIntegration/>}></Route>
+        <Route path="/Contraseña" element={ <Contraseña/> }></Route>
       </Routes>
       </BrowserRouter>
     </div>

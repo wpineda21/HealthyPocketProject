@@ -200,7 +200,12 @@ const ExamenDetalle = () => {
                         >
                           Modificar Detalle del Examen
                         </MDBBtn>
-                        <MDBBtn className="btn btn-danger m-3"   onClick={() => deletedetalle(detail.id, detail.code_det)}>
+                        <MDBBtn
+                          className="btn btn-danger m-3"
+                          onClick={() =>
+                            deletedetalle(detail.id, detail.code_det)
+                          }
+                        >
                           Eliminar Examen
                         </MDBBtn>
                       </tr>
@@ -280,7 +285,9 @@ const ExamenDetalle = () => {
                 />
               </div>
               <div className="d-grid col-6 mx-auto">
-                <button className="btn btn-success" onClick={() => validar()}>Guardar</button>
+                <button className="btn btn-success" onClick={() => validar()}>
+                  Guardar
+                </button>
               </div>
             </div>
             <div className="modal-footer">

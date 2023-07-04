@@ -24,12 +24,10 @@ const Header = (props) => {
     <>
       <MDBNavbar expand="lg" className="nav-back">
         <MDBContainer fluid>
-          <MDBNavbarBrand href="/Login"> <img
-            src={logo}
-            height='70'
-            alt=''
-            loading='lazy'
-          /></MDBNavbarBrand>
+          <MDBNavbarBrand href="/Login">
+            {" "}
+            <img src={logo} height="70" alt="" loading="lazy" />
+          </MDBNavbarBrand>
 
           <MDBNavbarToggler
             aria-controls="navbarSupportedContent"
@@ -42,7 +40,6 @@ const Header = (props) => {
 
           <MDBCollapse navbar show={showBasic}>
             <MDBNavbarNav className="mr-auto mb-lg-0">
-
               <MDBNavbarItem>
                 <MDBNavbarLink href="/UserPage">Home</MDBNavbarLink>
               </MDBNavbarItem>
@@ -63,16 +60,23 @@ const Header = (props) => {
                   <MDBDropdownMenu>
                     <MDBDropdownItem link>Perfil de Usuario</MDBDropdownItem>
                     <MDBDropdownItem link>Registro de Examenes</MDBDropdownItem>
-                    <MDBDropdownItem link>Control de Horario de Medicamento</MDBDropdownItem>
+                    <MDBDropdownItem link>
+                      Control de Horario de Medicamento
+                    </MDBDropdownItem>
                     <MDBDropdownItem link>Control de Gastos</MDBDropdownItem>
-                    <MDBDropdownItem link>Representacion Grafica de Estadisticas</MDBDropdownItem>
+                    <MDBDropdownItem link>
+                      Representacion Grafica de Estadisticas
+                    </MDBDropdownItem>
                   </MDBDropdownMenu>
                 </MDBDropdown>
               </MDBNavbarItem>
 
-            <MDBNavbarItem>
-                <MDBNavbarLink> Bienvenido :   {localStorage.getItem("usuario")}</MDBNavbarLink>
-            </MDBNavbarItem>
+              <MDBNavbarItem>
+                <MDBNavbarLink>
+                  {" "}
+                  Bienvenido : {localStorage.getItem("usuario")}
+                </MDBNavbarLink>
+              </MDBNavbarItem>
             </MDBNavbarNav>
           </MDBCollapse>
         </MDBContainer>
