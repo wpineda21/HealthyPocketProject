@@ -195,7 +195,7 @@ const UserPage = (props) => {
                   cercanos a tu direccion estimada, podras filtrar y entre otras opciones para
                   mantenerte informado.
                   <h1></h1>
-                  <MDBBtn className="btn-back" href="/MapSiG">
+                  <MDBBtn className="btn-back" href="/SigIntegration">
                     Ver mapa
                   </MDBBtn>
                 </MDBTabsPane>
