@@ -1,0 +1,39 @@
+.map-container-1{
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    align-items: center;
+    justify-content: center;
+    padding: 2%;
+    
+}
+
+.map-container-1 {
+    background: linear-gradient(123deg, #24a6bb, #01525f);
+    background-size: 400% 400%;
+
+    -webkit-animation: map-container-1 16s ease infinite;
+    -moz-animation: map-container-1 16s ease infinite;
+    animation: map-container-1 16s ease infinite;
+}
+
+@-webkit-keyframes map-container-1 {
+    0%{background-position:41% 0%}
+    50%{background-position:60% 100%}
+    100%{background-position:41% 0%}
+}
+@-moz-keyframes map-container-1 {
+    0%{background-position:41% 0%}
+    50%{background-position:60% 100%}
+    100%{background-position:41% 0%}
+}
+@keyframes map-container-1 {
+    0%{background-position:41% 0%}
+    50%{background-position:60% 100%}
+    100%{background-position:41% 0%}
+}
+
+.map-container-1 h1{
+    font-size: 2.6rem;
+    color: black;
+}
