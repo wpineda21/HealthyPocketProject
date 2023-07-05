@@ -219,6 +219,7 @@ const Citas = (props) => {
                     <th>Descripcion</th>
                     <th>Fecha de La cita</th>
                     <th>Dias en el Hospital</th>
+                    <th>Precio Cita</th>
                     <th></th>
                     <th>
                       {" "}
@@ -248,7 +249,8 @@ const Citas = (props) => {
                       <td>{citas.descripcion}</td>
                       <td>{citas.fecha}</td>
                       <td>{citas.tiempo_hos}</td>
-                      <td>${citas.precio}</td>
+                      <td>$  {citas.precio}</td>
+                      <td></td>
                       <td>
                         <MDBBtn
                           data-bs-toggle="modal"
@@ -303,8 +305,8 @@ const Citas = (props) => {
             </div>
             <div className="modal-body">
               <input type="hidden" id="id"></input>
+              <label>Descripcion:</label>
               <div className="input-group mb-3">
-                <span className="input-group-text"></span>
                 <input
                   type="text"
                   id="descripcion"
@@ -314,17 +316,17 @@ const Citas = (props) => {
                   onChange={(e) => setDescipcion(e.target.value)}
                 />
               </div>
-              <div className="input-group mb-3">
-                <span className="input-group-text"></span>
+              <label>Fecha Que Se Realizo El Examen:</label>
+              <div className="input-group mb-1">
                 <DatePicker
-                  className="mb-4"
+                  className="mb-3"
                   closeOnScroll={true}
                   selected={fecha}
                   onChange={(date) => setfecha(date)}
                 />
               </div>
+              <label>Dias Que Estuvo En El Hospital:</label>
               <div className="input-group mb-3">
-                <span className="input-group-text"></span>
                 <input
                   type="text"
                   id="tiempo_hos"
@@ -334,8 +336,8 @@ const Citas = (props) => {
                   onChange={(e) => settiempo_hos(e.target.value)}
                 />
               </div>
+              <label>Costo del Examen ($):</label>
               <div className="input-group mb-3">
-                <span className="input-group-text"></span>
                 <input
                   type="text"
                   id="precio"

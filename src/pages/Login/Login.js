@@ -222,6 +222,7 @@ const Login = (props) => {
                     onClick={() => handleSubmit("submit")}
                     type="submit"
                     className="btn-back mb-4 w-100"
+                    to="/UserPage" target="_self"
                   >
                     Sign in
                   </MDBBtn>

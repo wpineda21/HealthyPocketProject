@@ -237,6 +237,7 @@ const ExamenDetalle = () => {
             </div>
             <div className="modal-body">
               <input type="hidden" id="id"></input>
+              <label>Descripcion:</label>
               <div className="input-group mb-3">
                 <input
                   type="text"
@@ -247,14 +248,16 @@ const ExamenDetalle = () => {
                   onChange={(e) => Setdescipcion(e.target.value)}
                 />
               </div>
+              <label>Fecha Examen:</label>
               <div className="input-group mb-3">
                 <DatePicker
-                  className="mb-4"
+                  className="mb-1"
                   closeOnScroll={true}
                   selected={fecha}
                   onChange={(date) => Setfecha(date)}
                 />
               </div>
+              <label>Costo del Examen:</label>
               <div className="input-group mb-3">
                 <input
                   type="text"
@@ -265,7 +268,8 @@ const ExamenDetalle = () => {
                   onChange={(e) => Setgasto(e.target.value)}
                 />
               </div>
-              <div className="input-group mb-3">
+              <label>Hora Que Se Realizo El Examen:</label>
+              <div className="input-group mb-2">
                 <input
                   type="time"
                   id="appt"
@@ -274,6 +278,7 @@ const ExamenDetalle = () => {
                   onChange={(e) => Sethora(e.target.value)}
                 />
               </div>
+              <label>Resultado:</label>
               <div className="input-group mb-3">
                 <input
                   type="text"
@@ -301,16 +306,6 @@ const ExamenDetalle = () => {
               </button>
             </div>
           </div>
-        </div>
-        <div className="modal-footer">
-          <button
-            type="button"
-            class="btn btn-primary"
-            data-bs-dismiss="modal"
-            aria-label="Close"
-          >
-            Cerrar
-          </button>
         </div>
       </div>
     </>
