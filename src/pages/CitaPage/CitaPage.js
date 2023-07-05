@@ -316,7 +316,7 @@ const Citas = (props) => {
                   onChange={(e) => setDescipcion(e.target.value)}
                 />
               </div>
-              <label>Fecha Que Se Realizo El Examen:</label>
+              <label>Fecha Que Se Realizo La cita:</label>
               <div className="input-group mb-1">
                 <DatePicker
                   className="mb-3"
@@ -325,7 +325,7 @@ const Citas = (props) => {
                   onChange={(date) => setfecha(date)}
                 />
               </div>
-              <label>Dias Que Estuvo En El Hospital:</label>
+              <label>Dias Que Estuvo En El Hospital/Clinica:</label>
               <div className="input-group mb-3">
                 <input
                   type="text"
@@ -336,7 +336,7 @@ const Citas = (props) => {
                   onChange={(e) => settiempo_hos(e.target.value)}
                 />
               </div>
-              <label>Costo del Examen ($):</label>
+              <label>Costo de la Cita ($):</label>
               <div className="input-group mb-3">
                 <input
                   type="text"
