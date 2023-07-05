@@ -8,8 +8,9 @@ const SigIntegration = () => {
   return (
     <>
     <Header/>
+    <h1>HOSPITALES Y CLINICAS DE EL SALVADOR</h1>
     <div className="map-container-1">
-    <iframe src="http://127.0.0.1:5500/src/pages/SigIntegration/index.html#9/13.8225/-88.8612"
+    <iframe src="https://benjamincarpio.github.io/QGIS_GeolocationMap/#14/13.7194/-89.2171"
     title="SigIntegration"
       style={{ width: '100%', height: '100vh', border: 'none' }}
     />
