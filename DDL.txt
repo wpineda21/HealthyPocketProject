@@ -1,0 +1,76 @@
+CREATE TABLE public.roles (
+	code serial4 NOT NULL,
+	nombre varchar NOT NULL,
+	CONSTRAINT roles_pk PRIMARY KEY (code)
+);
+
+CREATE TABLE public.usuarios (
+	code_user uuid NOT NULL,
+	username varchar(255) NULL,
+	correo varchar(255) NULL,
+	nombre varchar(255) NULL,
+	apellido varchar(255) NULL,
+	contraseña varchar(255) NULL,
+	code int4 NULL,
+	CONSTRAINT usuarios_pkey PRIMARY KEY (code_user)
+);
+
+CREATE TABLE public.cita (
+	code_cita uuid NOT NULL DEFAULT gen_random_uuid(),
+	descripcion varchar NOT NULL,
+	fecha date NOT NULL,
+	tiempo_hos int4 NOT NULL,
+	precio varchar NOT NULL,
+	code_user uuid NOT NULL,
+	CONSTRAINT cita_pk PRIMARY KEY (code_cita),
+	CONSTRAINT cita_fk FOREIGN KEY (code_user) REFERENCES public.usuarios(code_user)
+);
+
+CREATE TABLE public.medicos (
+	code_med uuid NOT NULL,
+	nombre varchar(255) NULL,
+	especialidad varchar(255) NULL,
+	jvpm int4 NULL,
+	code_cita uuid NULL,
+	CONSTRAINT medicos_pkey PRIMARY KEY (code_med),
+	CONSTRAINT medicos_fk FOREIGN KEY (code_cita) REFERENCES public.cita(code_cita)
+);
+
+
+CREATE TABLE public.receta (
+	code_rcta uuid NOT NULL,
+	nombre varchar(255) NULL,
+	code_med uuid NULL,
+	CONSTRAINT receta_pkey PRIMARY KEY (code_rcta),
+	CONSTRAINT receta_fk FOREIGN KEY (code_med) REFERENCES public.medicos(code_med)
+);
+
+CREATE TABLE public.medicamentos (
+	code_medca uuid NOT NULL,
+	descripcion varchar(255) NULL,
+	hora time NULL,
+	cantidad int4 NULL,
+	code_rcta uuid NULL,
+	CONSTRAINT medicamentos_pkey PRIMARY KEY (code_medca),
+	CONSTRAINT medicamentos_fk FOREIGN KEY (code_rcta) REFERENCES public.receta(code_rcta)
+);
+
+CREATE TABLE public.examens (
+	code_exam uuid NOT NULL,
+	nombre varchar(255) NULL,
+	code_cita uuid NULL,
+	CONSTRAINT examens_pkey PRIMARY KEY (code_exam),
+	CONSTRAINT examens_fk FOREIGN KEY (code_cita) REFERENCES public.cita(code_cita)
+);
+
+CREATE TABLE public.detalles (
+	code_det uuid NOT NULL,
+	gasto float8 NULL,
+	descripcion varchar(255) NULL,
+	fecha timestamptz NULL,
+	hora time NULL,
+	resultado varchar(255) NULL,
+	code_exam uuid NULL,
+	CONSTRAINT detalles_pkey PRIMARY KEY (code_det),
+	CONSTRAINT detalles_fk FOREIGN KEY (code_exam) REFERENCES public.examens(code_exam)
+);
