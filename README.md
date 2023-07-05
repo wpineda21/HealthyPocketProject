@@ -42,3 +42,19 @@ $ npm run dev
 Para La Organizacion y el trabajo Colobarotavo de Este Proyecto Grupal Utilizamos la Plataforma TRELLO:
 
 - [Link de Nuestro Repositorio para trabajo colaborativo en TRELLO](https://trello.com/b/nr43tbAX/practicaprofesional)
+
+## Manual de usuario
+
+```sh
+$ Crear una cuenta en la Aplicacion Web
+$ Ingresar las credenciales al login para los accesos correspondientes.
+$ Se le dara acceso al funcionamiento de la Aplicacion Web  donde podra comenzar a usar sus funcionalidades.
+$ Puede ver la informacion de su perfil.
+$ Necesita un nuevo horario de medicamento para recordarlo
+$ Guardar el medicamento que debe tomar
+$ Mostrar el historial de medicamentos
+$ Agregar un examen medico
+```
+## Imagenes Guia
+
+![Incio de Sesion](https://github.com/wpineda21/HealthyPocketProject/blob/main/src/pages/Image/Prueba%201.png)
