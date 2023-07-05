@@ -21,6 +21,8 @@ $ Password: Wpineda2$
 
 -[Repositorio para Clonar La API](https://github.com/wpineda21/HealthyPocketApi-2.0.git)
 
+-[Link Para el Script de La base de Datos Utilizada](https://github.com/wpineda21/HealthyPocketProject/blob/main/DDL.txt)
+
 Clonamos los Repositorios E instalamos Despues de clonar el repositorio es necesario instalar las siguientes librerias:
 
 ```sh
