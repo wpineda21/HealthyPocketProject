@@ -16,6 +16,7 @@ $ Password: Wpineda2$
 
 -[Repositorio Para Clonar el Repositorio](https://github.com/UCASV/poryecto-healthypocket)
 
+
 -Tambien Clonar la API para la conexion con el cliente:
 
 -[Repositorio para Clonar La API](https://github.com/wpineda21/HealthyPocketApi-2.0.git)
@@ -58,3 +59,7 @@ $ Agregar un examen medico
 ## Imagenes Guia
 
 ![Incio de Sesion](https://github.com/wpineda21/HealthyPocketProject/blob/main/src/pages/Image/Prueba%201.png)
+
+![Incio de Sesion](https://github.com/wpineda21/HealthyPocketProject/blob/main/src/pages/Image/Prueba%202.jpg)
+
+![Incio de Sesion](https://github.com/wpineda21/HealthyPocketProject/blob/main/src/pages/Image/Prueba%203.jpg)
