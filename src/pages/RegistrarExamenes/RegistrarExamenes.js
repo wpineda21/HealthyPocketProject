@@ -104,6 +104,13 @@ const RegistrarExamenes = (props) => {
   };
 
   const enviarSolicitu = async (metodo, parametros) => {
+    console.log(
+      (parametros = {
+        code_cita: Examenes_porCodigo,
+        nombre: nombre,
+      })
+    );
+
     await axios({ method: metodo, url: API_URL, data: parametros })
       .then(function (respuesta) {
         var tipo = respuesta.data[0];
@@ -172,6 +179,13 @@ const RegistrarExamenes = (props) => {
     });
   };
 
+  const recargar = (reload) => {
+    const reloa2 = reload;
+    if (reloa2 === true) {
+      location.reload(getExamenes);
+    }
+  };
+
   return (
     <>
       <Header></Header>
@@ -199,7 +213,10 @@ const RegistrarExamenes = (props) => {
                     <th>Nombre Examen:</th>
                     <th></th>
                     <th>
-                      <MDBBtn className="btn btn-primary">
+                      <MDBBtn
+                        className="btn btn-primary"
+                        onClick={() => recargar(true)}
+                      >
                         Recargar Pagina
                       </MDBBtn>
                     </th>
@@ -262,7 +279,7 @@ const RegistrarExamenes = (props) => {
         <div className="modal-dialog">
           <div className="modal-content">
             <div className="modal-header">
-              <label className="h5">Informacion</label>
+              <label className="h5">Agregar Examen a la Cita</label>
               <button
                 type="button"
                 class="btn-close"
@@ -271,6 +288,7 @@ const RegistrarExamenes = (props) => {
               ></button>
             </div>
             <div className="modal-body">
+              <label>Nombre del Examen:</label>
               <div className="input-group mb-3">
                 <input
                   type="text"

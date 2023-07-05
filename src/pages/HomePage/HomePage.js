@@ -204,9 +204,9 @@ const Home = (props) => {
                             className="rounded-circle"
                           />
                           <div className="ms-3">
-                            <p className="fw-bold mb-1">Eduardo Payez</p>
+                            <p className="fw-bold mb-1">Eduardo Payes</p>
                             <p className="text-muted mb-0">
-                              eduardopayez@hotmail.com
+                              eduardopayes@hotmail.com
                             </p>
                           </div>
                         </div>
@@ -223,6 +223,22 @@ const Home = (props) => {
                             <p className="fw-bold mb-1">William Pineda</p>
                             <p className="text-muted mb-0">
                               williampineda@hotmail.com
+                            </p>
+                          </div>
+                        </div>
+                      </MDBListGroupItem>
+                      <MDBListGroupItem className="d-flex justify-content-between align-items-center">
+                        <div className="d-flex align-items-center">
+                          <img
+                            src={logo}
+                            alt=""
+                            style={{ width: "45px", height: "45px" }}
+                            className="rounded-circle"
+                          />
+                          <div className="ms-3">
+                            <p className="fw-bold mb-1">Ricardo Lopez</p>
+                            <p className="text-muted mb-0">
+                              RicardoLopez@hotmail.com
                             </p>
                           </div>
                         </div>

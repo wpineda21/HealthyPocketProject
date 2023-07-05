@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "./UserPage.css";
 import Header from "../Header/Header";
+import { Link } from "react-router-dom";
 import {
   MDBCol,
   MDBListGroup,
@@ -13,6 +14,7 @@ import {
   MDBTabsPane,
   MDBBtn,
 } from "mdb-react-ui-kit";
+
 
 const UserPage = (props) => {
   const [basicActive, setBasicActive] = useState("settings2");
@@ -135,9 +137,9 @@ const UserPage = (props) => {
                   Comprende tus patrones y logra un enfoque más informado para
                   mejorar tu bienestar general
                   <h1></h1>
-                  <MDBBtn className="btn-back" href="/Citas">
-                    ver Mis Citas
-                  </MDBBtn>
+                  <Link to="/Citas" target="_self">
+                    <MDBBtn className="btn-back">ver Mis Citas</MDBBtn>
+                  </Link>
                 </MDBTabsPane>
 
                 <MDBTabsPane show={basicActive === "home"}>
@@ -148,9 +150,11 @@ const UserPage = (props) => {
                   completo de tus exámenes médicos para tener un control más
                   efectivo de tu salud.
                   <h1></h1>
-                  <MDBBtn className="btn-back" href="/Examenes">
-                    Ver Examenes
-                  </MDBBtn>
+                  <Link to="/Examenes" target="_self">
+                    <MDBBtn className="btn-back" >
+                      Ver Examenes
+                    </MDBBtn>
+                  </Link>
                 </MDBTabsPane>
 
                 <MDBTabsPane show={basicActive === "profile"}>
@@ -161,9 +165,11 @@ const UserPage = (props) => {
                   un registro actualizado de tu plan de medicación para
                   garantizar un manejo adecuado y seguro de tus tratamientos.
                   <h1></h1>
-                  <MDBBtn className="btn-back" href="/Medicamento">
+                  <Link to="/Medicamento" target="_self">
+                  <MDBBtn className="btn-back">
                     Ver Mis Medicamentos
                   </MDBBtn>
+                  </Link>
                 </MDBTabsPane>
                 <MDBTabsPane show={basicActive === "settings"}>
                   Accede a una visión completa y personalizada de tus
@@ -174,6 +180,7 @@ const UserPage = (props) => {
                   Comprende tus patrones y logra un enfoque más informado para
                   mejorar tu bienestar general
                   <h1></h1>
+                  
                   <MDBBtn className="btn-back">ver Mis Estadisticas</MDBBtn>
                 </MDBTabsPane>
 
@@ -183,9 +190,11 @@ const UserPage = (props) => {
                   datos mas relevantes como tu nombre, doctor principal,
                   examenes realizados entre otas cosas.
                   <h1></h1>
+                  <Link to="/UserProfile" target="_self">
                   <MDBBtn className="btn-back" href="/UserProfile">
                     Ver mis datos
                   </MDBBtn>
+                  </Link>
                 </MDBTabsPane>
 
                 <MDBTabsPane show={basicActive === "statistics"}>
@@ -202,9 +211,11 @@ const UserPage = (props) => {
                   podras filtrar y entre otras opciones para mantenerte
                   informado.
                   <h1></h1>
+                  <Link to="/SigIntegration" target="_self">
                   <MDBBtn className="btn-back" href="/SigIntegration">
                     Ver mapa
                   </MDBBtn>
+                  </Link>
                 </MDBTabsPane>
               </MDBTabsContent>
             </MDBCol>

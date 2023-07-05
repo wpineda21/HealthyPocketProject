@@ -293,8 +293,8 @@ const Medicamentos = () => {
             </div>
             <div className="modal-body">
               <input type="hidden" id="id"></input>
+              <label>Descripcion: </label>
               <div className="input-group mb-3">
-                <span className="input-group-text"></span>
                 <input
                   type="text"
                   id="descripcion"
@@ -304,8 +304,8 @@ const Medicamentos = () => {
                   onChange={(e) => setDescipcion(e.target.value)}
                 />
               </div>
+              <label>Cantidad Medicamento: </label>
               <div className="input-group mb-3 m-0">
-                <span className="input-group-text"></span>
                 <input
                   type="text"
                   id="precio"
@@ -316,7 +316,7 @@ const Medicamentos = () => {
                 />
               </div>
               <div className="input-group mb-4">
-                <label className="m-2">Hora Medicamento</label>
+                <label className="m-2">Hora Medicamento: </label>
                 <input
                   type="time"
                   id="appt"

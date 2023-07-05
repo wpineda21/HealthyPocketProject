@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "./SHeader.css";
 import logo from "../Header/logoNav.png";
+import { Link } from "react-router-dom";
 import {
   MDBContainer,
   MDBNavbar,
@@ -44,11 +45,18 @@ const Header = (props) => {
           <MDBCollapse navbar show={showBasic}>
             <MDBNavbarNav className="mr-auto mb-lg-0">
               <MDBNavbarItem>
-                <MDBNavbarLink href="/Login">Iniciar Sesion</MDBNavbarLink>
+
+                <Link className="nav-link Item" to="/Login" target="_self">
+                  {" "}
+                  Iniciar Sesion
+                </Link>
               </MDBNavbarItem>
 
               <MDBNavbarItem>
-                <MDBNavbarLink href="/">Home</MDBNavbarLink>
+                <Link className="nav-link Item" to="/" target="_self">
+                  {" "}
+                  Home
+                </Link>
               </MDBNavbarItem>
 
               <MDBNavbarItem>
