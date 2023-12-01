@@ -5,6 +5,7 @@ import withReactContent from "sweetalert2-react-content";
 import { show_Alerta } from "../functions";
 import Header from "../Header/Header";
 import DatePicker from "react-datepicker";
+import HeaderNuevo from "../Header/HeaderNuevo";
 import Button from "react-bootstrap/Button";
 import "./citaPage.css";
 import {
@@ -198,7 +199,7 @@ const Citas = (props) => {
 
   return (
     <>
-      <Header></Header>
+      <HeaderNuevo></HeaderNuevo>
 
       <div className="container">
         <div className="row text-center pt-3 mt-3">

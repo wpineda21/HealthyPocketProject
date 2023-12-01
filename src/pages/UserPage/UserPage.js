@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import "./UserPage.css";
 import Header from "../Header/Header";
 import { Link } from "react-router-dom";
+import HeaderNuevo from "../Header/HeaderNuevo";
 import {
   MDBCol,
   MDBListGroup,
@@ -28,7 +29,7 @@ const UserPage = (props) => {
 
   return (
     <>
-      <Header></Header>
+      <HeaderNuevo></HeaderNuevo>
 
       <div className="container ">
         <div className="row text-center pt-5">

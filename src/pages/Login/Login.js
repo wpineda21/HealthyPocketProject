@@ -88,7 +88,7 @@ const Login = (props) => {
       console.log("Error en el servidor:", error.message);
       setLoginError(true); // Establecer el estado de error de inicio de sesión
     }
-  }; //Eveneto que se activa si todo sale bien en el inicio de sesion
+  }; //Evento que se activa si todo sale bien en el inicio de sesion
   if (isAuthorized) {
     return <Navigate to="/UserPage" />;
   }
@@ -103,7 +103,7 @@ const Login = (props) => {
           "Content-Type": "application/json",
         },
         body: JSON.stringify({
-          username,
+          username: username,
           correo: email,
           nombre: name,
           apellido: lastname,
@@ -111,13 +111,31 @@ const Login = (props) => {
           code: 1,
         }),
       });
-
       if (response.ok) {
         const data = await response.json();
         console.log("Registro Perfecto");
         setIsRegisterOk(true);
         setokRegisterAlert(true);
+        // Imprimir los valores enviados en la solicitud
+        console.log("Valores enviados en la solicitud:", {
+          username: username,
+          correo: email,
+          nombre: name,
+          apellido: lastname,
+          contraseña: password,
+          code: 1,
+        });
       } else {
+        // Imprimir los valores enviados en la solicitud
+        console.log("Valores enviados en la solicitud:", {
+          username: username,
+          correo: email,
+          nombre: name,
+          apellido: lastname,
+          contraseña: password,
+          code: 1,
+        });
+
         console.log("Error:", response.status);
         setRegisterError(true); // Establecer el estado de error de inicio de sesión
       }
@@ -193,7 +211,6 @@ const Login = (props) => {
                     wrapperClass="mb-4"
                     label="Email address"
                     id="form12"
-                    type="email"
                     value={username}
                     onChange={(e) => setUsername(e.target.value)}
                   />
@@ -222,7 +239,8 @@ const Login = (props) => {
                     onClick={() => handleSubmit("submit")}
                     type="submit"
                     className="btn-back mb-4 w-100"
-                    to="/UserPage" target="_self"
+                    to="/UserPage"
+                    target="_self"
                   >
                     Sign in
                   </MDBBtn>
