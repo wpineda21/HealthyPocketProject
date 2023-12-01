@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import Header from "../Header/Header";
 import "./UserProfile.css";
+import HeaderNuevo from "../Header/HeaderNuevo";
 
 const UserProfile = (props) => {
   const perfilUsuario = localStorage.getItem("code_user");
@@ -23,7 +24,7 @@ const UserProfile = (props) => {
 
   return (
     <>
-      <Header />
+      <HeaderNuevo></HeaderNuevo>
       <div className="container-main-card">
         <br></br>
         <h1>Resumen de datos de {user.username}</h1>

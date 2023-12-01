@@ -15,6 +15,7 @@ import Medicamentos from "./pages/Medicamentos/Medicamentos";
 import UserProfile from "./pages/UserProfile/UserProfile";
 import SigIntegration from "./pages/SigIntegration/SigIntegration";
 import Contraseña from "./pages/Contraseña/Contraseña";
+import NewCitasPage from "./pages/CitaPage/NewCitaPage";
 
 
 
@@ -27,7 +28,7 @@ function App() {
         <Route path="/Login" element={ <Login/> }></Route>
         <Route path="/Home" element={ <Login/> }></Route>
         <Route path="/UserPage" element={ <UserPage/> }></Route>
-        <Route path="/Citas" element={ <Citas/> }></Route>
+        <Route path="/Citas" element={ <NewCitasPage/> }></Route>
         <Route path="/Examenes" element={ <VisualizarExamenes/> }></Route>
         <Route path="/Examenes/Registro" element={ <RegistrarExamenes/> }></Route>
         <Route path="/Examenes/Registro/Detalle" element={ <ExamenDetalle/> }></Route>

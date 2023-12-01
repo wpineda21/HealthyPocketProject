@@ -26,6 +26,15 @@ import ListItemIcon from "@mui/material/ListItemIcon";
 import ListItemText from "@mui/material/ListItemText";
 import InboxIcon from "@mui/icons-material/MoveToInbox";
 import MailIcon from "@mui/icons-material/Mail";
+import AddHomeWorkIcon from '@mui/icons-material/AddHomeWork';
+import ArticleIcon from '@mui/icons-material/Article';
+import MedicationLiquidIcon from '@mui/icons-material/MedicationLiquid';
+import PersonIcon from '@mui/icons-material/Person';
+import AlignHorizontalLeftIcon from '@mui/icons-material/AlignHorizontalLeft';
+import ApprovalIcon from '@mui/icons-material/Approval';
+import { Link } from "react-router-dom";
+import HomeIcon from '@mui/icons-material/Home';
+
 
 const pages = ["Home", "Pricing", "Blog"];
 
@@ -58,41 +67,46 @@ const HeaderNuevo = (props) => {
 
   const list = (anchor) => (
 <Box
-  sx={{
-    width: anchor === "top" || anchor === "bottom" ? "auto" : 250,
-    backgroundColor: "#00ABB3",
-  }}
-  role="presentation"
-  onClick={toggleDrawer(anchor, false)}
-  onKeyDown={toggleDrawer(anchor, false)}
->
-  <List>
-    {["Inbox", "Starred", "Send email", "Drafts"].map((text, index) => (
-      <ListItem key={text} disablePadding>
-        <ListItemButton>
-          <ListItemIcon>
-            {index % 4 === 0 ? <InboxIcon /> : <MailIcon />}
-          </ListItemIcon>
-          <ListItemText primary={text} />
-        </ListItemButton>
-      </ListItem>
-    ))}
-  </List>
-  <Divider />
-  <List>
-    {["All mail", "Trash", "Spam"].map((text, index) => (
-      <ListItem key={text} disablePadding>
-        <ListItemButton>
-          <ListItemIcon>
-            {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
-          </ListItemIcon>
-          <ListItemText primary={text} />
-        </ListItemButton>
-      </ListItem>
-    ))}
-  </List>
-</Box>
-
+    sx={{
+      width: anchor === "top" || anchor === "bottom" ? "auto" : 250,
+      height: "100%",
+      backgroundColor: "#2185D5",
+      position: "fixed",
+      top: 0,
+      left: 0,
+      display: 'flex',
+      flexDirection: 'column',
+      alignItems: 'center',
+      justifyContent: 'center',
+      padding: '16px',
+    }}
+    role="presentation"
+    onClick={toggleDrawer(anchor, false)}
+    onKeyDown={toggleDrawer(anchor, false)}
+  >
+    <h3 style={{ color: "#FAFAFA" }}>Menu</h3>
+    <Divider></Divider>
+    <List>
+      {[
+        { text: "Home", icon: <HomeIcon />, route: "/UserPage" },
+        { text: "Citas", icon: <AddHomeWorkIcon />, route: "/citas" },
+        { text: "Examenes", icon: <ArticleIcon /> ,route: "/Examenes" },
+        { text: "Medicamentos", icon: <MedicationLiquidIcon />,route: "/Medicamento"  },
+        { text: "Mi Perfil", icon: <PersonIcon />,route: "/UserProfile" },
+        { text: "Estadisticas", icon: <AlignHorizontalLeftIcon />,route: "/Proximamente" },
+        { text: "Centros Medicos", icon: <ApprovalIcon />,route: "/SigIntegration"  },
+      ].map((item, index) => (
+        <ListItem key={item.text} disablePadding>
+          <Link to={item.route} style={{ textDecoration: 'none', color: 'inherit' }}>
+            <ListItemButton>
+              <ListItemIcon sx={{ color: "#FAFAFA" }}>{item.icon}</ListItemIcon>
+              <ListItemText primary={item.text} sx={{ color: "#FAFAFA" }} />
+            </ListItemButton>
+          </Link>
+        </ListItem>
+      ))}
+    </List>
+  </Box>
   );
 
   const handleChange = (event) => {
@@ -124,7 +138,7 @@ const HeaderNuevo = (props) => {
 
   return (
     <Box sx={{ flexGrow: 1 }}>
-      <AppBar position="static" sx={{ backgroundColor: "#00ABB3" }}>
+      <AppBar position="static" sx={{ backgroundColor: "#0077C0" }}>
         <Toolbar>
           {["left"].map((anchor) => (
             <React.Fragment key={anchor}>

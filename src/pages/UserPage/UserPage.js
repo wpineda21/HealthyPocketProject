@@ -15,7 +15,13 @@ import {
   MDBTabsPane,
   MDBBtn,
 } from "mdb-react-ui-kit";
-
+import AddHomeWorkIcon from "@mui/icons-material/AddHomeWork";
+import ArticleIcon from "@mui/icons-material/Article";
+import MedicationLiquidIcon from "@mui/icons-material/MedicationLiquid";
+import PersonIcon from "@mui/icons-material/Person";
+import AlignHorizontalLeftIcon from "@mui/icons-material/AlignHorizontalLeft";
+import ApprovalIcon from "@mui/icons-material/Approval";
+import HomeIcon from "@mui/icons-material/Home";
 
 const UserPage = (props) => {
   const [basicActive, setBasicActive] = useState("settings2");
@@ -32,10 +38,10 @@ const UserPage = (props) => {
       <HeaderNuevo></HeaderNuevo>
 
       <div className="container ">
-        <div className="row text-center pt-5">
-          <h1>¿Que deseas hacer Hoy? : {localStorage.getItem("usuario")}</h1>
+        <div className="row text-center pt-3">
+          <h2>¿Que deseas hacer Hoy? {localStorage.getItem("usuario")}</h2>
         </div>
-        <div className="row mt-5">
+        <div className="row mt-3">
           <MDBRow>
             <MDBCol size={4}>
               <MDBListGroup light small>
@@ -50,6 +56,7 @@ const UserPage = (props) => {
                       <MDBTabsLink
                         onClick={() => handleBasicClick("settings2")}
                       >
+                        <AddHomeWorkIcon style={{ marginRight: "6px" }} />
                         Ver Mis Citas
                       </MDBTabsLink>
                     </MDBTabsItem>
@@ -63,6 +70,7 @@ const UserPage = (props) => {
                   >
                     <MDBTabsItem>
                       <MDBTabsLink onClick={() => handleBasicClick("home")}>
+                        <ArticleIcon style={{ marginRight: "6px" }} />
                         Ver Examenes
                       </MDBTabsLink>
                     </MDBTabsItem>
@@ -76,6 +84,7 @@ const UserPage = (props) => {
                   >
                     <MDBTabsItem>
                       <MDBTabsLink onClick={() => handleBasicClick("profile")}>
+                        <MedicationLiquidIcon style={{ marginRight: "6px" }} />
                         Ver Medicamentos
                       </MDBTabsLink>
                     </MDBTabsItem>
@@ -91,6 +100,7 @@ const UserPage = (props) => {
                       <MDBTabsLink
                         onClick={() => handleBasicClick("userprofile")}
                       >
+                        <PersonIcon style={{ marginRight: "6px" }} />
                         Ver mi Perfil
                       </MDBTabsLink>
                     </MDBTabsItem>
@@ -106,6 +116,7 @@ const UserPage = (props) => {
                       <MDBTabsLink
                         onClick={() => handleBasicClick("statistics")}
                       >
+                        <AlignHorizontalLeftIcon style={{ marginRight: "6px" }} />
                         Ver Mis Estadisticas
                       </MDBTabsLink>
                     </MDBTabsItem>
@@ -119,6 +130,7 @@ const UserPage = (props) => {
                   >
                     <MDBTabsItem>
                       <MDBTabsLink onClick={() => handleBasicClick("mapsinfo")}>
+                      <ApprovalIcon style={{ marginRight: '6px' }} />
                         Vista Centros medicos
                       </MDBTabsLink>
                     </MDBTabsItem>
@@ -152,9 +164,7 @@ const UserPage = (props) => {
                   efectivo de tu salud.
                   <h1></h1>
                   <Link to="/Examenes" target="_self">
-                    <MDBBtn className="btn-back" >
-                      Ver Examenes
-                    </MDBBtn>
+                    <MDBBtn className="btn-back">Ver Examenes</MDBBtn>
                   </Link>
                 </MDBTabsPane>
 
@@ -167,9 +177,7 @@ const UserPage = (props) => {
                   garantizar un manejo adecuado y seguro de tus tratamientos.
                   <h1></h1>
                   <Link to="/Medicamento" target="_self">
-                  <MDBBtn className="btn-back">
-                    Ver Mis Medicamentos
-                  </MDBBtn>
+                    <MDBBtn className="btn-back">Ver Mis Medicamentos</MDBBtn>
                   </Link>
                 </MDBTabsPane>
                 <MDBTabsPane show={basicActive === "settings"}>
@@ -181,7 +189,6 @@ const UserPage = (props) => {
                   Comprende tus patrones y logra un enfoque más informado para
                   mejorar tu bienestar general
                   <h1></h1>
-                  
                   <MDBBtn className="btn-back">ver Mis Estadisticas</MDBBtn>
                 </MDBTabsPane>
 
@@ -192,9 +199,9 @@ const UserPage = (props) => {
                   examenes realizados entre otas cosas.
                   <h1></h1>
                   <Link to="/UserProfile" target="_self">
-                  <MDBBtn className="btn-back" href="/UserProfile">
-                    Ver mis datos
-                  </MDBBtn>
+                    <MDBBtn className="btn-back" href="/UserProfile">
+                      Ver mis datos
+                    </MDBBtn>
                   </Link>
                 </MDBTabsPane>
 
@@ -213,9 +220,9 @@ const UserPage = (props) => {
                   informado.
                   <h1></h1>
                   <Link to="/SigIntegration" target="_self">
-                  <MDBBtn className="btn-back" href="/SigIntegration">
-                    Ver mapa
-                  </MDBBtn>
+                    <MDBBtn className="btn-back" href="/SigIntegration">
+                      Ver mapa
+                    </MDBBtn>
                   </Link>
                 </MDBTabsPane>
               </MDBTabsContent>

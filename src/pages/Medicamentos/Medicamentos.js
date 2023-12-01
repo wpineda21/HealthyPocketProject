@@ -30,6 +30,7 @@ import {
   MDBRow,
   MDBCheckbox,
 } from "mdb-react-ui-kit";
+import HeaderNuevo from "../Header/HeaderNuevo";
 
 const Medicamentos = () => {
   const codigo_recta = "1e925aaa-6923-4216-a917-d78a39150475";
@@ -184,7 +185,7 @@ const Medicamentos = () => {
 
   return (
     <>
-      <Header></Header>
+      <HeaderNuevo></HeaderNuevo>
       <div className="container">
         <div className="row text-center pt-3 mt-3">
           <div className="col-md-4 offset-4">

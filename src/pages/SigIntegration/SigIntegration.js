@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import Header from "../Header/Header";
 import "./sigintegration.css";
 import { Button } from "react-bootstrap";
+import HeaderNuevo from "../Header/HeaderNuevo";
 
 
 
@@ -9,7 +10,7 @@ import { Button } from "react-bootstrap";
 const SigIntegration = () => {
   return (
     <>
-    <Header/>
+    <HeaderNuevo></HeaderNuevo>
     <div className="map-container-1">
     <h1>HOSPITALES DE EL SALVADOR</h1>
     <Button href="https://benjamincarpio.github.io/QGIS_GeolocationMap/#14/13.7194/-89.2171">WEB DETALLADA (BETA)</Button>

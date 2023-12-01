@@ -30,6 +30,7 @@ import {
   MDBCheckbox,
 } from "mdb-react-ui-kit";
 import { Navigate } from "react-router-dom";
+import HeaderNuevo from "../Header/HeaderNuevo";
 
 const VisualizarExamenes = (props) => {
   const CitasUsuario = localStorage.getItem("code_user");
@@ -78,7 +79,7 @@ const VisualizarExamenes = (props) => {
 
   return (
     <>
-      <Header></Header>
+      <HeaderNuevo></HeaderNuevo>
 
       <div className="container">
         <div className="row text-center pt-3 mt-3">
